@@ -25,7 +25,7 @@ args = vars(parser.parse_args())
 image = cv2.imread(args['input'])
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 # path for saving the result image
-save_name = f"outputs/{args['input'].split('/')[-1].split('.')[0]}_u{args['upsample']}.jpg"
+save_name = f"outputs/Thermal image/{args['input'].split('/')[-1].split('.')[0]}_u{args['upsample']}.jpg"
 
 # initilaize the Dlib face detector
 detector = dlib.cnn_face_detection_model_v1('mmod_human_face_detector.dat')
